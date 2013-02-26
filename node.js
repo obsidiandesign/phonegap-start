@@ -17,10 +17,11 @@ $('#drupalgap_node').on('pageshow', function(){
 		    	$('#node_body') = '';
 		    }
 		    if (node.type == "tournamentteam")  {
-		    	//$('#node_content').html("Location: " + node.field_city.und[0].value + ", " + node.field_state.und[0].value + "<br/>Age Group: " + node.field_age_group.und[0].value + "<br/>" + node.body);
-		    	$('#node_content').html("This is a tournament team!");
+		    	$('#node_content').html("Location: " + node.field_city.und[0].value + ", " + node.field_state.und[0].value + "<br/>Age Group: " + node.field_age_group.und[0].value + "<br/>" + node.body);
+		    	alert("This is a tournament team!");
 		    }
 		    else {
+		    	alert(node.type);
 				$('#node_content').html(node.content);
 			}
 			if (node.uid == drupalgap.user.uid) {
