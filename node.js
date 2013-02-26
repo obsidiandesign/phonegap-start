@@ -16,8 +16,9 @@ $('#drupalgap_node').on('pageshow', function(){
 		    else {
 		    	$('#node_body') = '';
 		    }
-		    if (node.field_age_group.und && node.field_city.und && node.field_state.und) {
-		    	$('#node_content').html("Location: " + node.field_city.und[0].value + ", " + node.field_state.und[0].value + "<br/>Age Group: " + node.field_age_group.und[0].value + "<br/>" + node.body);
+		    if (node.type == "tournamentteam")  {
+		    	//$('#node_content').html("Location: " + node.field_city.und[0].value + ", " + node.field_state.und[0].value + "<br/>Age Group: " + node.field_age_group.und[0].value + "<br/>" + node.body);
+		    	$('#node_content').html("This is a tournament team!");
 		    }
 		    else {
 				$('#node_content').html(node.content);
